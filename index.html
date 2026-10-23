@@ -21,7 +21,7 @@
 <meta name="geo.placename" content="Rochdale">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"AutoRental","@id":"https://raymanhire.co.uk/#business","name":"Rayman Hire","url":"https://raymanhire.co.uk/","telephone":"+447723339946","image":"https://raymanhire.co.uk/img/corolla.webp","priceRange":"££","description":"Taxi and private hire car rental in Rochdale and Greater Manchester. Weekly payments, no age limit, fresh licence accepted.","address":{"@type":"PostalAddress","streetAddress":"2 Southdown Close","addressLocality":"Rochdale","postalCode":"OL11 4PP","addressCountry":"GB"},"areaServed":["Rochdale","Heywood","Middleton","Littleborough","Oldham","Bury","Manchester","Greater Manchester"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Product","name":"Toyota Corolla Hatchback 2022 Hybrid – weekly hire"}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Toyota Prius 2019 Hybrid – weekly hire"}}]},
+{"@type":"AutoRental","@id":"https://raymanhire.co.uk/#business","name":"Rayman Hire","url":"https://raymanhire.co.uk/","telephone":"+447723339946","email":"info@raymanhire.co.uk","image":"https://raymanhire.co.uk/img/corolla.webp","priceRange":"££","description":"Taxi and private hire car rental in Rochdale and Greater Manchester. Weekly payments, no age limit, fresh licence accepted.","address":{"@type":"PostalAddress","streetAddress":"2 Southdown Close","addressLocality":"Rochdale","postalCode":"OL11 4PP","addressCountry":"GB"},"areaServed":["Rochdale","Heywood","Middleton","Littleborough","Oldham","Bury","Manchester","Greater Manchester"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Product","name":"Toyota Corolla Hatchback 2022 Hybrid – weekly hire"}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Toyota Prius 2019 Hybrid – weekly hire"}}]},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Is there an age limit?","acceptedAnswer":{"@type":"Answer","text":"No. Rayman Hire has no age limit for drivers."}},
 {"@type":"Question","name":"I have a fresh licence. Can I still hire?","acceptedAnswer":{"@type":"Answer","text":"Yes, fresh licences are also acceptable. Call us and we will explain what you need to bring."}},
@@ -77,7 +77,16 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backgroun
 .btn-ghost{border-color:#ffffff2a;background:#ffffff0a;color:var(--fg)}
 .btn-ghost:hover{background:#ffffff16;transform:translateY(-2px)}
 .nav .btn{padding:11px 18px;font-size:14px}
-@media (max-width:900px){.nav ul{display:none}}
+.menu-btn{display:none;background:#ffffff10;border:1px solid #ffffff2a;color:var(--fg);border-radius:12px;width:44px;height:44px;cursor:pointer;align-items:center;justify-content:center}
+.menu-btn svg{width:22px;height:22px}
+.nav-right{display:flex;gap:10px;align-items:center}
+@media (max-width:900px){
+  .menu-btn{display:inline-flex}
+  .nav nav{position:absolute;left:0;right:0;top:100%;background:#060a15f8;border-bottom:1px solid var(--line);display:none}
+  .nav nav.open{display:block}
+  .nav ul{flex-direction:column;gap:0;padding:8px max(20px,env(safe-area-inset-left,0px)) 16px}
+  .nav ul a{display:block;padding:14px 4px;font-size:17px;color:var(--fg);border-bottom:1px solid var(--line)}
+}
 @media (max-width:420px){.nav .btn .lbl{display:none}.nav .btn{padding:11px 13px}}
 
 .hero{min-height:clamp(600px,90vh,880px);display:grid;align-items:center;position:relative}
@@ -109,7 +118,7 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backgroun
 .no-webgl .car-switch{display:none}
 @media (max-width:900px){.no-webgl .hero-fallback{position:static;translate:none;width:100%;order:-1}.no-webgl .hero-spacer{display:none}}
 
-section.block{padding-block:clamp(72px,10vw,130px)}
+section.block{scroll-margin-top:76px;padding-block:clamp(72px,10vw,130px)}
 .sec-head{display:grid;gap:14px;max-width:720px;margin-bottom:48px}
 .sec-head h2{font-size:clamp(42px,6vw,76px);font-weight:900;text-transform:uppercase}
 .sec-head p{color:var(--muted);font-size:18px;max-width:58ch}
@@ -284,14 +293,17 @@ footer p{color:var(--muted);font-size:14px}
 <header class="nav">
   <div class="wrap">
     <a href="#top" class="plate" aria-label="Rayman Hire home"><span class="gb" aria-hidden="true"><span>★</span><span>UK</span></span><span class="txt">RAYMAN HIRE</span></a>
-    <nav aria-label="Main"><ul>
+    <nav aria-label="Main" id="mainnav"><ul>
       <li><a href="#fleet">Fleet</a></li>
       <li><a href="#weekly">Weekly payment</a></li>
       <li><a href="#features">Why Rayman</a></li>
       <li><a href="#areas">Areas</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul></nav>
+    <div class="nav-right">
+    <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <a class="btn btn-plate call" href="tel:+447723339946" aria-label="Call Rayman Hire on 07723 339946"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span class="lbl">07723 339946</span></a>
+    </div>
   </div>
 </header>
 
@@ -518,6 +530,7 @@ footer p{color:var(--muted);font-size:14px}
         <div class="c-card glass">
           <div class="c-row"><span class="eyebrow">Phone / WhatsApp</span><a class="big-num call" id="phone" href="tel:+447723339946">+44 7723 339946</a>
             <button class="copy" id="copy-phone" type="button">Copy number</button></div>
+          <div class="c-row"><span class="eyebrow">Email</span><a class="addr" href="mailto:info@raymanhire.co.uk" style="text-decoration:none">info@raymanhire.co.uk</a></div>
           <div class="c-row"><span class="eyebrow">Address</span><address class="addr">Rayman Hire<br>2 Southdown Close<br>Rochdale OL11 4PP</address>
             <a class="copy" href="https://www.google.com/maps/search/?api=1&amp;query=2+Southdown+Close+Rochdale+OL11+4PP" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>
           <div class="ctas">
@@ -552,7 +565,7 @@ footer p{color:var(--muted);font-size:14px}
 <footer>
   <div class="wrap">
     <span class="plate"><span class="gb" aria-hidden="true"><span>★</span><span>UK</span></span><span class="txt">RAYMAN HIRE</span></span>
-    <p>Taxi &amp; private hire car rental · 2 Southdown Close, Rochdale OL11 4PP · +44 7723 339946</p>
+    <p>Taxi &amp; private hire car rental · 2 Southdown Close, Rochdale OL11 4PP · +44 7723 339946 · <a href="mailto:info@raymanhire.co.uk">info@raymanhire.co.uk</a></p>
     <p>© <span id="yr">2026</span> Rayman Hire · raymanhire.co.uk</p>
   </div>
 </footer>
@@ -608,6 +621,11 @@ footer p{color:var(--muted);font-size:14px}
   }
   $('#copy-phone').addEventListener('click', e => copyNum(e.currentTarget, $('#phone')));
   $('#sheet-copy').addEventListener('click', e => copyNum(e.currentTarget, $('#sheet-num')));
+
+  /* ---------- Mobile menu ---------- */
+  const mb = $('#menu-btn'), mn = $('#mainnav');
+  mb.addEventListener('click', () => { const o = mn.classList.toggle('open'); mb.setAttribute('aria-expanded', String(o)); });
+  mn.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mn.classList.remove('open'); mb.setAttribute('aria-expanded','false'); }));
 
   /* ---------- Enquiry form -> WhatsApp ---------- */
   $('#enq').addEventListener('submit', e => {
