@@ -21,12 +21,15 @@
 <meta name="geo.placename" content="Rochdale">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"AutoRental","@id":"https://raymanhire.co.uk/#business","name":"Rayman Hire","url":"https://raymanhire.co.uk/","telephone":"+447723339946","email":"info@raymanhire.co.uk","image":"https://raymanhire.co.uk/img/corolla.webp","priceRange":"££","description":"Taxi and private hire car rental in Rochdale and Greater Manchester. Weekly payments, no age limit, fresh licence accepted.","address":{"@type":"PostalAddress","streetAddress":"2 Southdown Close","addressLocality":"Rochdale","postalCode":"OL11 4PP","addressCountry":"GB"},"areaServed":["Rochdale","Heywood","Middleton","Littleborough","Oldham","Bury","Manchester","Greater Manchester"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Product","name":"Toyota Corolla Hybrid – weekly hire"}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Prius Hybrid – weekly hire"}}]},
+{"@type":"AutoRental","@id":"https://raymanhire.co.uk/#business","name":"Rayman Hire","url":"https://raymanhire.co.uk/","telephone":"+447723339946","email":"info@raymanhire.co.uk","image":"https://raymanhire.co.uk/img/corolla.webp","priceRange":"££","description":"Taxi and private hire car rental in Rochdale and Greater Manchester. Weekly payments, fully comprehensive insurance, servicing and maintenance, GPS tracker, 24/7 accident support, unlimited mileage, no age limit, fresh licence accepted.","address":{"@type":"PostalAddress","streetAddress":"2 Southdown Close","addressLocality":"Rochdale","postalCode":"OL11 4PP","addressCountry":"GB"},"areaServed":["Rochdale","Heywood","Middleton","Littleborough","Oldham","Bury","Manchester","Greater Manchester"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Product","name":"Toyota Corolla Hybrid – weekly hire"}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Prius Hybrid – weekly hire"}}]},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Is there an age limit?","acceptedAnswer":{"@type":"Answer","text":"No. Rayman Hire has no age limit for drivers."}},
 {"@type":"Question","name":"I have a fresh licence. Can I still hire?","acceptedAnswer":{"@type":"Answer","text":"Yes, fresh licences are also acceptable. Call us and we will explain what you need to bring."}},
 {"@type":"Question","name":"How do the payments work?","acceptedAnswer":{"@type":"Answer","text":"You pay weekly. Call +44 7723 339946 for this week's price on each car."}},
 {"@type":"Question","name":"Where are you based?","acceptedAnswer":{"@type":"Answer","text":"2 Southdown Close, Rochdale OL11 4PP. We serve drivers across Rochdale and Greater Manchester."}},
+{"@type":"Question","name":"Is insurance included?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every car comes with fully comprehensive insurance. A GPS tracker is fitted to help keep the insurance cost low."}},
+{"@type":"Question","name":"Is there a mileage limit?","acceptedAnswer":{"@type":"Answer","text":"No. You get unlimited mileage."}},
+{"@type":"Question","name":"What happens if I have an accident?","acceptedAnswer":{"@type":"Answer","text":"Call us. Our accident support is available 24/7."}},
 {"@type":"Question","name":"Can I see the car before I hire it?","acceptedAnswer":{"@type":"Answer","text":"Yes. Call ahead and come to see the car in person before you agree anything."}}]}
 ]}
 </script>
@@ -267,6 +270,51 @@ footer p{color:var(--muted);font-size:14px}
   footer{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}
 }
 
+
+/* What's included */
+.incl{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;perspective:1100px}
+@media (max-width:1100px){.incl{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:700px){.incl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:440px){.incl{grid-template-columns:1fr}}
+.inc{position:relative;padding:24px 20px;border-radius:20px;display:grid;gap:12px;align-content:start;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,translate .9s cubic-bezier(.2,.7,.2,1),scale .9s;transform-style:preserve-3d}
+.inc::after{content:"";position:absolute;inset:-40% -40% auto auto;width:140px;height:140px;border-radius:50%;background:radial-gradient(closest-side,#f7c60030,transparent);transition:transform .5s}
+.inc:hover{transform:translateY(-8px) rotateX(6deg);box-shadow:0 26px 40px -24px #f7c60066;border-color:#f7c60066}
+.inc:hover::after{transform:scale(1.6)}
+.inc .badge{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:var(--plate);color:var(--plate-ink);box-shadow:0 12px 26px -10px #f7c600aa}
+.inc .badge svg{width:28px;height:28px}
+.inc h3{font-family:var(--f-body);font-size:18px;font-weight:700;line-height:1.25}
+.inc p{color:var(--muted);font-size:14.5px}
+.inc .tick{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--plate);text-transform:uppercase}
+/* icon motion */
+.ic-ins .ic-anim{stroke-dasharray:14;stroke-dashoffset:14;animation:draw 2.4s ease-in-out infinite}
+@keyframes draw{0%{stroke-dashoffset:14}40%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:-14}}
+.ic-srv .ic-anim{transform-origin:12px 12px;animation:wrench 2.4s ease-in-out infinite}
+@keyframes wrench{0%,100%{transform:rotate(0)}20%{transform:rotate(-22deg)}40%{transform:rotate(14deg)}60%{transform:rotate(0)}}
+.ic-gps .ic-anim{transform-origin:12px 10px;animation:ping 1.8s ease-out infinite}
+@keyframes ping{0%{transform:scale(.3);opacity:1}100%{transform:scale(1.5);opacity:0}}
+.ic-acc .ic-anim{transform-origin:12px 12px;animation:spin 3s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ic-mil .ic-anim{stroke-dasharray:6 4;animation:flow 1.2s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-20}}
+
+/* Floating perk popups */
+.perk-pop{position:fixed;z-index:58;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));width:min(340px,calc(100vw - 32px));display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 14px 18px 14px;border-radius:18px;background:linear-gradient(150deg,#1a2446f5,#0b1226f5);border:1px solid #f7c60066;box-shadow:0 24px 50px -18px #000,0 0 0 1px #0006 inset,0 0 40px -14px #f7c60066;overflow:hidden;transform-origin:0% 100%;transform:perspective(700px) rotateX(18deg) translateY(30px) scale(.9);opacity:0;pointer-events:none;transition:transform .6s cubic-bezier(.2,1.3,.3,1),opacity .4s}
+.perk-pop.show{transform:none;opacity:1;pointer-events:auto}
+.perk-pop .badge{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--plate);color:var(--plate-ink);animation:bob 2.6s ease-in-out infinite}
+.perk-pop .badge svg{width:24px;height:24px}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-4deg)}}
+.perk-pop .k{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--plate)}
+.perk-pop b{display:block;font-size:15.5px;line-height:1.25;margin-top:2px}
+.perk-pop small{display:block;color:var(--muted);font-size:13px;line-height:1.35;margin-top:3px}
+.perk-pop .x{background:none;border:0;color:var(--muted);font-size:18px;line-height:1;cursor:pointer;padding:6px;align-self:start}
+.perk-pop .bar{position:absolute;left:0;bottom:0;height:3px;background:var(--plate);width:0}
+.perk-pop.show .bar{animation:bar 5.2s linear forwards}
+@keyframes bar{to{width:100%}}
+.perk-pop .spark{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--plate);opacity:0}
+.perk-pop.show .spark{animation:spark 1s ease-out forwards}
+@keyframes spark{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+@media (max-width:700px){.perk-pop{bottom:calc(84px + env(safe-area-inset-bottom,0px));padding:12px 12px 15px}.perk-pop small{display:none}.perk-pop .badge{width:40px;height:40px}}
+
 /* Call sheet: used where a phone link cannot dial (desktop, embedded preview) */
 .sheet{position:fixed;inset:0;z-index:80;display:grid;place-items:end center;background:#000a;padding:16px max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 @media (min-width:701px){.sheet{place-items:center}}
@@ -295,6 +343,7 @@ footer p{color:var(--muted);font-size:14px}
     <a href="#top" class="plate" aria-label="Rayman Hire home"><span class="gb" aria-hidden="true"><span>★</span><span>UK</span></span><span class="txt">RAYMAN HIRE</span></a>
     <nav aria-label="Main" id="mainnav"><ul>
       <li><a href="#fleet">Fleet</a></li>
+      <li><a href="#included">What's included</a></li>
       <li><a href="#weekly">Weekly payment</a></li>
       <li><a href="#features">Why Rayman</a></li>
       <li><a href="#areas">Areas</a></li>
@@ -321,6 +370,8 @@ footer p{color:var(--muted);font-size:14px}
           <li class="chip">No age limit</li>
           <li class="chip">Fresh licence accepted</li>
           <li class="chip">Weekly payments</li>
+          <li class="chip">Fully comprehensive insurance</li>
+          <li class="chip">Unlimited mileage</li>
         </ul>
       </div>
       <div class="hero-spacer" aria-hidden="true"></div>
@@ -334,8 +385,8 @@ footer p{color:var(--muted);font-size:14px}
   </section>
 
   <div class="ticker" aria-hidden="true"><div class="track">
-    <span>No age limit</span><span>Fresh licence accepted</span><span>Weekly payments</span><span>Toyota hybrids</span><span>Rochdale OL11</span><span>Private hire ready</span>
-    <span>No age limit</span><span>Fresh licence accepted</span><span>Weekly payments</span><span>Toyota hybrids</span><span>Rochdale OL11</span><span>Private hire ready</span>
+    <span>No age limit</span><span>Fresh licence accepted</span><span>Weekly payments</span><span>Toyota hybrids</span><span>Rochdale OL11</span><span>Private hire ready</span><span>Fully comprehensive insurance</span><span>Unlimited mileage</span><span>24/7 accident support</span>
+    <span>No age limit</span><span>Fresh licence accepted</span><span>Weekly payments</span><span>Toyota hybrids</span><span>Rochdale OL11</span><span>Private hire ready</span><span>Fully comprehensive insurance</span><span>Unlimited mileage</span><span>24/7 accident support</span>
   </div></div>
 
   <section class="block" id="fleet" aria-labelledby="fleet-h">
@@ -380,6 +431,23 @@ footer p{color:var(--muted);font-size:14px}
             <a class="btn btn-plate" href="https://wa.me/447723339946?text=Hi%20Rayman%20Hire%2C%20is%20the%20Prius%20available%3F" target="_blank" rel="noopener">Book this car</a>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="included" aria-labelledby="included-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Included in every hire</span>
+        <h2 id="included-h">Everything sorted. You just drive.</h2>
+        <p>Your weekly payment covers all of this. No hidden extras.</p>
+      </div>
+      <div class="incl">
+        <article class="inc glass rv ic-ins"><span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path class="ic-anim" d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><span class="tick">Included</span><h3>Fully comprehensive insurance</h3><p>Every car comes with fully comprehensive insurance, so you are covered on every job.</p></article>
+        <article class="inc glass rv ic-srv"><span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g class="ic-anim"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-2 2-2.3-2.3a4 4 0 0 0-5-5"/><path d="M14.7 6.3 3 18l3 3L17.7 9.3"/></g></svg></span><span class="tick">Included</span><h3>Servicing &amp; maintenance</h3><p>We look after servicing and maintenance. Your job is just to drive.</p></article>
+        <article class="inc glass rv ic-gps"><span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/><circle class="ic-anim" cx="12" cy="10" r="6"/></svg></span><span class="tick">Included</span><h3>GPS tracker fitted</h3><p>A GPS tracker is fitted in every car to help keep your insurance cost low.</p></article>
+        <article class="inc glass rv ic-acc"><span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path class="ic-anim" d="M12 7v5l3 2"/></svg></span><span class="tick">Included</span><h3>24/7 accident support</h3><p>Had an accident? Call us any time, day or night, and we will help.</p></article>
+        <article class="inc glass rv ic-mil"><span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="ic-anim" d="M18.2 8.5a4.4 4.4 0 0 1 0 7c-2.6 2-5.2-.8-6.2-3.5-1-2.7-3.6-5.5-6.2-3.5a4.4 4.4 0 0 0 0 7c2.6 2 5.2-.8 6.2-3.5 1-2.7 3.6-5.5 6.2-3.5z"/></svg></span><span class="tick">Included</span><h3>Unlimited mileage</h3><p>Drive as many miles as you need. No mileage limits, no extra charges.</p></article>
       </div>
     </div>
   </section>
@@ -462,6 +530,10 @@ footer p{color:var(--muted);font-size:14px}
             <tr><th scope="row">Age limit</th><td class="us"><span class="yes">No age limit</span></td><td class="them">Often 25+ only</td></tr>
             <tr><th scope="row">Fresh licence</th><td class="us"><span class="yes">Accepted</span></td><td class="them">Usually 2–3 years held</td></tr>
             <tr><th scope="row">Payments</th><td class="us"><span class="yes">Weekly</span></td><td class="them">Weekly or monthly contract</td></tr>
+            <tr><th scope="row">Insurance</th><td class="us"><span class="yes">Fully comprehensive, included</span></td><td class="them">Often extra or third party</td></tr>
+            <tr><th scope="row">Mileage</th><td class="us"><span class="yes">Unlimited</span></td><td class="them">Often capped</td></tr>
+            <tr><th scope="row">Servicing</th><td class="us"><span class="yes">Included</span></td><td class="them">Sometimes driver pays</td></tr>
+            <tr><th scope="row">Accident help</th><td class="us"><span class="yes">24/7 support</span></td><td class="them">Office hours</td></tr>
             <tr><th scope="row">Cars</th><td class="us"><span class="yes">Toyota hybrids</span></td><td class="them">Mixed fleet</td></tr>
             <tr><th scope="row">Contact</th><td class="us"><span class="yes">Call or WhatsApp direct</span></td><td class="them">Online form, wait for reply</td></tr>
           </tbody>
@@ -515,6 +587,9 @@ footer p{color:var(--muted);font-size:14px}
         <details class="glass"><summary>I have a fresh licence. Can I still hire?</summary><p>Yes, fresh licences are also acceptable. Call us and we'll explain what you need to bring.</p></details>
         <details class="glass"><summary>How do the payments work?</summary><p>You pay weekly. Call +44 7723 339946 for this week's price on each car.</p></details>
         <details class="glass"><summary>Where are you based?</summary><p>2 Southdown Close, Rochdale OL11 4PP. We serve drivers across Rochdale and Greater Manchester.</p></details>
+        <details class="glass"><summary>Is insurance included?</summary><p>Yes. Every car comes with fully comprehensive insurance. A GPS tracker is fitted to help keep the insurance cost low.</p></details>
+        <details class="glass"><summary>Is there a mileage limit?</summary><p>No. You get unlimited mileage, so drive as much as your work needs.</p></details>
+        <details class="glass"><summary>What happens if I have an accident?</summary><p>Call us. Our accident support is available 24/7 and we will guide you through what to do next.</p></details>
         <details class="glass"><summary>Can I see the car before I hire it?</summary><p>Yes. Call ahead and come to see the car in person before you agree anything.</p></details>
       </div>
     </div>
@@ -570,6 +645,12 @@ footer p{color:var(--muted);font-size:14px}
   </div>
 </footer>
 
+<div class="perk-pop" id="perk" role="status" aria-live="polite">
+  <span class="badge" id="perk-ic" aria-hidden="true"></span>
+  <div><span class="k">Included with Rayman Hire</span><b id="perk-t"></b><small id="perk-d"></small></div>
+  <button class="x" id="perk-x" type="button" aria-label="Hide these messages">✕</button>
+  <span class="bar"></span>
+</div>
 <div class="callbar">
   <a class="btn btn-plate call" href="tel:+447723339946">Call</a>
   <a class="btn btn-ghost" href="https://wa.me/447723339946" target="_blank" rel="noopener">WhatsApp</a>
@@ -621,6 +702,30 @@ footer p{color:var(--muted);font-size:14px}
   }
   $('#copy-phone').addEventListener('click', e => copyNum(e.currentTarget, $('#phone')));
   $('#sheet-copy').addEventListener('click', e => copyNum(e.currentTarget, $('#sheet-num')));
+
+  /* ---------- Animated "included" popups ---------- */
+  (function(){
+    const ICONS = {shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path class="ic-anim" d="m8.5 12 2.5 2.5 4.5-5"/></svg>',wrench:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g class="ic-anim"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-2 2-2.3-2.3a4 4 0 0 0-5-5"/><path d="M14.7 6.3 3 18l3 3L17.7 9.3"/></g></svg>',gps:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/><circle class="ic-anim" cx="12" cy="10" r="6"/></svg>',clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path class="ic-anim" d="M12 7v5l3 2"/></svg>',inf:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="ic-anim" d="M18.2 8.5a4.4 4.4 0 0 1 0 7c-2.6 2-5.2-.8-6.2-3.5-1-2.7-3.6-5.5-6.2-3.5a4.4 4.4 0 0 0 0 7c2.6 2 5.2-.8 6.2-3.5 1-2.7 3.6-5.5 6.2-3.5z"/></svg>'};
+    const PERKS = [["shield", "Fully comprehensive insurance", "Every car comes with fully comprehensive insurance, so you are covered on every job."], ["wrench", "Servicing & maintenance", "We look after servicing and maintenance. Your job is just to drive."], ["gps", "GPS tracker fitted", "A GPS tracker is fitted in every car to help keep your insurance cost low."], ["clock", "24/7 accident support", "Had an accident? Call us any time, day or night, and we will help."], ["inf", "Unlimited mileage", "Drive as many miles as you need. No mileage limits, no extra charges."]];
+    const box = $('#perk'), ic = $('#perk-ic'), tt = $('#perk-t'), dd = $('#perk-d');
+    let i = 0, stopped = false, timer = 0;
+    try { if (sessionStorage.getItem('perkOff') === '1') stopped = true; } catch(e){}
+    function sparks(){
+      box.querySelectorAll('.spark').forEach(n => n.remove());
+      for (let k=0;k<8;k++){ const sp=document.createElement('span'); sp.className='spark'; const a=k/8*Math.PI*2; sp.style.left='37px'; sp.style.top='37px'; sp.style.setProperty('--dx', Math.cos(a)*40+'px'); sp.style.setProperty('--dy', Math.sin(a)*40+'px'); box.appendChild(sp); }
+    }
+    function show(){
+      if (stopped || !sheet.hidden) { timer = setTimeout(show, 4000); return; }
+      const p = PERKS[i++ % PERKS.length];
+      ic.innerHTML = ICONS[p[0]]; tt.textContent = p[1]; dd.textContent = p[2];
+      box.classList.remove('show'); void box.offsetWidth; sparks(); box.classList.add('show');
+      timer = setTimeout(() => { box.classList.remove('show'); timer = setTimeout(show, 2600); }, 5200);
+    }
+    $('#perk-x').addEventListener('click', () => { stopped = true; clearTimeout(timer); box.classList.remove('show'); try { sessionStorage.setItem('perkOff','1'); } catch(e){} });
+    // first popup only after the visitor scrolls past the hero, so it never covers the main buttons
+    function start(){ if (scrollY > innerHeight*0.7){ removeEventListener('scroll', start); if (!stopped) timer = setTimeout(show, 600); } }
+    addEventListener('scroll', start, {passive:true}); start();
+  })();
 
   /* ---------- Mobile menu ---------- */
   const mb = $('#menu-btn'), mn = $('#mainnav');
