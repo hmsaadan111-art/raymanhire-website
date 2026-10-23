@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rayman Hire | Taxi &amp; Private Hire Car Rental in Rochdale – Weekly Payments</title>
+<meta name="description" content="Taxi and private hire car rental in Rochdale and Greater Manchester. Toyota hybrids on weekly payments. No age limit and fresh licence holders accepted. Call +44 7723 339946.">
+<meta name="keywords" content="taxi car hire Rochdale, private hire car rental Rochdale, private hire car hire Greater Manchester, Toyota Prius hire, Toyota Corolla hire, weekly car hire, fresh licence car hire, no age limit car hire, Oldham, Bury, Heywood, Manchester">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://raymanhire.co.uk/">
+<meta name="theme-color" content="#060a15">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rayman Hire">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://raymanhire.co.uk/">
+<meta property="og:title" content="Rayman Hire | Taxi &amp; Private Hire Car Rental in Rochdale">
+<meta property="og:description" content="Toyota hybrids on weekly payments. No age limit. Fresh licence accepted. Call +44 7723 339946.">
+<meta property="og:image" content="https://raymanhire.co.uk/img/corolla.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="geo.region" content="GB-RCH">
+<meta name="geo.placename" content="Rochdale">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"AutoRental","@id":"https://raymanhire.co.uk/#business","name":"Rayman Hire","url":"https://raymanhire.co.uk/","telephone":"+447723339946","image":"https://raymanhire.co.uk/img/corolla.webp","priceRange":"££","description":"Taxi and private hire car rental in Rochdale and Greater Manchester. Weekly payments, no age limit, fresh licence accepted.","address":{"@type":"PostalAddress","streetAddress":"2 Southdown Close","addressLocality":"Rochdale","postalCode":"OL11 4PP","addressCountry":"GB"},"areaServed":["Rochdale","Heywood","Middleton","Littleborough","Oldham","Bury","Manchester","Greater Manchester"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Product","name":"Toyota Corolla Hatchback 2022 Hybrid – weekly hire"}},{"@type":"Offer","itemOffered":{"@type":"Product","name":"Toyota Prius 2019 Hybrid – weekly hire"}}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is there an age limit?","acceptedAnswer":{"@type":"Answer","text":"No. Rayman Hire has no age limit for drivers."}},
+{"@type":"Question","name":"I have a fresh licence. Can I still hire?","acceptedAnswer":{"@type":"Answer","text":"Yes, fresh licences are also acceptable. Call us and we will explain what you need to bring."}},
+{"@type":"Question","name":"How do the payments work?","acceptedAnswer":{"@type":"Answer","text":"You pay weekly. Call +44 7723 339946 for this week's price on each car."}},
+{"@type":"Question","name":"Where are you based?","acceptedAnswer":{"@type":"Answer","text":"2 Southdown Close, Rochdale OL11 4PP. We serve drivers across Rochdale and Greater Manchester."}},
+{"@type":"Question","name":"Can I see the car before I hire it?","acceptedAnswer":{"@type":"Answer","text":"Yes. Call ahead and come to see the car in person before you agree anything."}}]}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Instrument+Sans:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: a night-time showroom by the motorway. One fixed WebGL scene (stage, light trails, city) sits behind the page; content floats over it on solid glass-tinted panels. Brand mark = UK number plate. */
+:root{
+  --ink:#060a15; --panel:#0d1426; --line:#1f2a45; --fg:#e9edf6; --muted:#97a3bf;
+  --plate:#f7c600; --plate-ink:#111;
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --f-body:"Instrument Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--ink) radial-gradient(1200px 700px at 72% 38%,#18244a 0%,#0a1124 45%,var(--ink) 75%) fixed;color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--plate);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:.95;margin:0}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--plate)}
+
+#scene{position:fixed;inset:0;width:100%;height:100lvh;z-index:0;display:block;opacity:0;transition:opacity 1s}
+#scene.ready{opacity:1}
+.page{position:relative;z-index:1;overflow-x:clip}
+
+.plate{display:inline-flex;align-items:center;background:var(--plate);color:var(--plate-ink);border-radius:5px;border:2px solid #0006;font-family:var(--f-display);font-weight:900;letter-spacing:.06em;line-height:1;overflow:hidden;box-shadow:0 6px 24px -8px #f7c60088}
+.plate .gb{background:#1a3fa8;color:#fff;font-family:var(--f-mono);font-size:.42em;font-weight:700;padding:.5em .45em;align-self:stretch;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.15em}
+.plate .txt{padding:.28em .55em .22em}
+
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#060a15f0;border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.nav .plate{font-size:22px;text-decoration:none}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:600}
+.nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15px/1 var(--f-body);text-decoration:none;border-radius:999px;padding:14px 22px;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap;touch-action:manipulation}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plate{background:var(--plate);color:var(--plate-ink);box-shadow:0 10px 30px -10px #f7c600aa}
+.btn-plate:hover{transform:translateY(-2px)}
+.btn-ghost{border-color:#ffffff2a;background:#ffffff0a;color:var(--fg)}
+.btn-ghost:hover{background:#ffffff16;transform:translateY(-2px)}
+.nav .btn{padding:11px 18px;font-size:14px}
+@media (max-width:900px){.nav ul{display:none}}
+@media (max-width:420px){.nav .btn .lbl{display:none}.nav .btn{padding:11px 13px}}
+
+.hero{min-height:clamp(600px,90vh,880px);display:grid;align-items:center;position:relative}
+.hero .wrap{width:100%;padding-block:56px 40px}
+.hero-copy{max-width:580px;display:grid;gap:22px}
+.hero h1{display:grid;gap:18px}
+.hero h1 .kw{font-family:var(--f-mono);font-weight:500;font-size:12px;line-height:1.5;letter-spacing:.16em;text-transform:uppercase;color:var(--plate)}
+.hero h1 .big{font-size:clamp(54px,8.4vw,112px);font-weight:900;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--plate)}
+.hero .lead{font-size:clamp(17px,1.6vw,19px);color:#c6cee0;max-width:46ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chip{font:600 13px/1 var(--f-body);padding:9px 13px;border-radius:999px;border:1px solid #f7c60055;background:#f7c6000f;display:inline-flex;gap:8px;align-items:center}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--plate);box-shadow:0 0 10px var(--plate)}
+.car-switch{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:34px;display:flex;gap:8px;align-items:center;background:#0b1224f0;border:1px solid var(--line);border-radius:999px;padding:6px}
+.car-switch button{font:600 13px/1 var(--f-body);color:var(--muted);background:none;border:0;border-radius:999px;padding:10px 14px;cursor:pointer}
+.car-switch button[aria-pressed="true"]{background:var(--plate);color:var(--plate-ink)}
+.car-switch .tag{font-family:var(--f-mono);font-size:11px;color:var(--muted);padding:0 8px 0 10px;letter-spacing:.08em}
+.hero-spacer{display:none}
+.hero-fallback{display:none}
+@media (max-width:900px){
+  .hero{min-height:0;align-items:start}
+  .hero .wrap{padding-block:24px;display:flex;flex-direction:column}
+  .hero-spacer{display:block;order:-1;height:min(64vw,340px)}
+  .car-switch{position:static;margin-top:6px;width:max-content;max-width:100%}
+}
+/* shown only if WebGL is unavailable */
+.no-webgl .hero-fallback{display:block;position:absolute;right:max(20px,env(safe-area-inset-right,0px));top:50%;translate:0 -50%;width:min(52%,640px);filter:drop-shadow(0 30px 30px #000)}
+.no-webgl .car-switch{display:none}
+@media (max-width:900px){.no-webgl .hero-fallback{position:static;translate:none;width:100%;order:-1}.no-webgl .hero-spacer{display:none}}
+
+section.block{padding-block:clamp(72px,10vw,130px)}
+.sec-head{display:grid;gap:14px;max-width:720px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(42px,6vw,76px);font-weight:900;text-transform:uppercase}
+.sec-head p{color:var(--muted);font-size:18px;max-width:58ch}
+.glass{background:linear-gradient(160deg,#121b33f2,#0a1020f2);border:1px solid var(--line);border-radius:22px}
+
+/* scroll reveal: transform-only, content is visible at rest */
+.rv{transition:translate .9s cubic-bezier(.2,.7,.2,1),scale .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv:not(.in){translate:0 36px;scale:.98}
+@keyframes rise{from{translate:0 40px}to{translate:0 0}}
+.hero-copy>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}
+
+.ticker{border-block:1px solid var(--line);background:#070c19;overflow:hidden}
+.ticker .track{display:flex;gap:56px;padding-block:18px;width:max-content;animation:tick 32s linear infinite;font-family:var(--f-display);font-weight:800;font-size:26px;text-transform:uppercase;letter-spacing:.04em;will-change:transform}
+.ticker span{display:inline-flex;align-items:center;gap:56px;color:#cfd6e6}
+.ticker span::after{content:"";width:10px;height:10px;background:var(--plate);transform:rotate(45deg)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+.fleet{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;perspective:1400px}
+@media (max-width:860px){.fleet{grid-template-columns:1fr}}
+.car-card{position:relative;transform-style:preserve-3d;transition:transform .25s ease-out,translate .9s cubic-bezier(.2,.7,.2,1),scale .9s;border-radius:24px;padding:28px;display:grid;gap:18px;min-width:0}
+.car-card .stage{position:relative;height:clamp(190px,24vw,260px);transform-style:preserve-3d;display:grid;place-items:center}
+.car-card .stage::before{content:"";position:absolute;left:8%;right:8%;bottom:6%;height:26%;border-radius:50%;background:radial-gradient(closest-side,#f7c60040,transparent 70%)}
+.car-card img{position:relative;width:94%;height:auto;transform:translateZ(70px);filter:drop-shadow(0 26px 22px #000a)}
+.car-card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;transform:translateZ(40px)}
+.car-card h3{font-size:clamp(34px,4vw,46px);font-weight:900;text-transform:uppercase}
+.car-card .yr{font-family:var(--f-mono);font-size:12px;color:var(--muted);letter-spacing:.1em;margin-top:6px}
+.reg{font-size:15px}
+.specs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;transform:translateZ(30px);margin:0}
+@media (max-width:460px){.specs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.spec{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#0a1122;display:flex;flex-direction:column-reverse}
+.spec dd{margin:0;font-family:var(--f-mono);font-size:14px;font-weight:700}
+.spec dt{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.car-card .foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;transform:translateZ(40px)}
+.price{font-family:var(--f-display);font-weight:800;font-size:24px;text-transform:uppercase}
+.price small{display:block;font-family:var(--f-body);font-weight:600;font-size:13px;color:var(--muted);text-transform:none}
+
+.weekly{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+@media (max-width:900px){.weekly{grid-template-columns:1fr}}
+.week3d{perspective:1100px;padding:30px 0}
+.week-board{transform:rotateX(22deg) rotateZ(-8deg) rotateY(14deg);transform-style:preserve-3d;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.week3d:hover .week-board{transform:rotateX(10deg) rotateZ(-3deg) rotateY(6deg)}
+.day{aspect-ratio:3/4;max-width:100%;border-radius:12px;border:1px solid var(--line);background:linear-gradient(170deg,#16213f,#0b1226);display:flex;flex-direction:column;justify-content:space-between;padding:10px 8px;font-family:var(--f-mono)}
+.day small{font-size:10px;letter-spacing:.12em;color:var(--muted)}
+.day b{font-family:var(--f-display);font-size:clamp(18px,2.4vw,30px);font-weight:800}
+.day.pay{background:var(--plate);color:var(--plate-ink);border-color:var(--plate);transform:translateZ(46px);box-shadow:0 30px 40px -18px #f7c600aa}
+.day.pay small{color:#3a3000}
+.day.drive{transform:translateZ(14px)}
+.week-legend{display:flex;gap:18px;margin-top:22px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.week-legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;vertical-align:-1px}
+.terms{display:grid;gap:14px;margin-top:28px}
+.term{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;border-radius:16px}
+.term .ic{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#f7c60018;color:var(--plate);border:1px solid #f7c60044}
+.term .ic svg{width:22px;height:22px}
+.term h3{font-family:var(--f-body);font-size:18px;font-weight:700;line-height:1.3;margin-bottom:2px}
+.term p{color:var(--muted);font-size:15px}
+.term.hl{border-color:#f7c60077;background:linear-gradient(160deg,#2a2610f2,#0d1324f2)}
+.term.hl h3{color:var(--plate)}
+
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.features{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.features{grid-template-columns:1fr}}
+.flip{perspective:1000px;min-height:230px;position:relative}
+.flip-in{position:relative;height:100%;min-height:230px;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+@media (hover:hover){.flip:hover .flip-in{transform:rotateY(180deg)}}
+.flip.on .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:20px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--line)}
+.face.front{background:linear-gradient(160deg,#121b33,#0a1020)}
+.face.back{transform:rotateY(180deg);background:linear-gradient(160deg,#1b2442,#0c1328);border-color:#f7c60055}
+.face .num{font-family:var(--f-display);font-weight:900;font-size:64px;line-height:.9;color:var(--plate)}
+.face h3{font-size:30px;font-weight:800;text-transform:uppercase}
+.face p{color:#c3cbe0;font-size:15px}
+.face .hint{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.flip.big .face.front{background:var(--plate);color:var(--plate-ink);border-color:var(--plate)}
+.flip.big .face.front .num,.flip.big .face.front .hint{color:var(--plate-ink)}
+.flip-btn{all:unset;position:absolute;inset:0;border-radius:20px;cursor:pointer;z-index:2}
+.flip-btn:focus-visible{outline:2px solid var(--plate)}
+
+.compare{overflow-x:auto;border-radius:22px}
+.compare table{width:100%;border-collapse:collapse;min-width:560px}
+.compare th,.compare td{padding:18px 22px;text-align:left;border-bottom:1px solid var(--line);font-size:16px}
+.compare thead th{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.compare thead th.us{color:var(--plate)}
+.compare td.us{font-weight:700;background:#f7c6000d}
+.compare td.them{color:var(--muted)}
+.compare tr:last-child td,.compare tr:last-child th{border-bottom:0}
+.yes{display:inline-flex;gap:8px;align-items:center}
+.yes::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--plate);box-shadow:0 0 10px var(--plate)}
+
+.road{perspective:900px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;transform:rotateX(18deg);transform-origin:50% 100%;position:relative;padding:26px 0 10px;list-style:none;margin:0}
+.steps::before{content:"";position:absolute;left:0;right:0;top:50%;height:4px;background:repeating-linear-gradient(90deg,var(--plate) 0 34px,transparent 34px 60px);opacity:.5;animation:dash 1.4s linear infinite}
+@keyframes dash{to{background-position:60px 0}}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));transform:none}.steps::before{display:none}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.step{position:relative;padding:24px;border-radius:18px;display:grid;gap:10px;transition:transform .3s,translate .9s cubic-bezier(.2,.7,.2,1),scale .9s}
+.step:hover{transform:translateY(-6px)}
+.step .n{font-family:var(--f-mono);font-size:13px;color:var(--plate-ink);background:var(--plate);width:34px;height:34px;border-radius:8px;display:grid;place-items:center;font-weight:700}
+.step h3{font-family:var(--f-body);font-size:19px;font-weight:700;line-height:1.3}
+.step p{color:var(--muted);font-size:15px}
+
+.areas{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media (max-width:860px){.areas{grid-template-columns:1fr}}
+.areas .copy-txt{display:grid;gap:16px;color:#c3cbe0;max-width:62ch}
+.areas .copy-txt strong{color:var(--fg)}
+.town-list{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:24px;border-radius:22px}
+.town-list li{font:700 15px/1 var(--f-body);padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:#0a1122}
+.town-list li.home{background:var(--plate);color:var(--plate-ink);border-color:var(--plate)}
+
+.faq{display:grid;gap:12px;max-width:860px}
+.faq details{border-radius:16px;padding:0 22px}
+.faq summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:600;font-size:17px;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--f-mono);color:var(--plate);font-size:20px;line-height:1;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--muted);padding-bottom:20px;max-width:65ch}
+
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:28px}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+.c-card{padding:30px;border-radius:24px;display:grid;gap:22px;align-content:start;min-width:0}
+.c-row{display:grid;gap:6px}
+.c-row .eyebrow{color:var(--muted)}
+.big-num{font-family:var(--f-display);font-weight:900;font-size:clamp(34px,4.6vw,52px);letter-spacing:.02em;line-height:1;user-select:all;overflow-wrap:anywhere;text-decoration:none}
+address{font-style:normal}
+.addr{font-size:20px;font-weight:600;line-height:1.4}
+.copy{font:600 13px/1 var(--f-body);color:var(--fg);background:#ffffff10;border:1px solid #ffffff22;border-radius:999px;padding:10px 14px;cursor:pointer;width:max-content;text-decoration:none}
+form.enq{display:grid;gap:14px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.f2{grid-template-columns:1fr}}
+label{display:grid;gap:7px;font-size:13px;font-weight:600;color:#c3cbe0}
+input,select,textarea{font:500 16px/1.4 var(--f-body);color:var(--fg);background:#070d1c;border:1px solid var(--line);border-radius:12px;padding:13px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--plate);box-shadow:0 0 0 3px #f7c60033}
+textarea{resize:vertical;min-height:90px}
+.form-note{font-size:14px;color:var(--muted)}
+.form-out{display:grid;gap:12px;padding:18px;border-radius:14px;border:1px solid #f7c60066;background:#f7c6000f}
+
+footer{border-top:1px solid var(--line);background:#050812;padding-block:44px calc(44px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+footer .plate{font-size:20px}
+footer p{color:var(--muted);font-size:14px}
+
+.callbar{display:none}
+@media (max-width:700px){
+  .callbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:#060a15f5;border-top:1px solid var(--line)}
+  .callbar .btn{padding:13px 10px}
+  footer{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}
+}
+
+/* Call sheet: used where a phone link cannot dial (desktop, embedded preview) */
+.sheet{position:fixed;inset:0;z-index:80;display:grid;place-items:end center;background:#000a;padding:16px max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+@media (min-width:701px){.sheet{place-items:center}}
+.sheet-card{width:min(440px,100%);padding:28px;border-radius:24px;display:grid;gap:16px;animation:rise .4s cubic-bezier(.2,.7,.2,1)}
+.sheet-card .big-num{font-size:44px}
+.sheet-card .row{display:flex;flex-wrap:wrap;gap:10px}
+.sheet-close{justify-self:end;background:none;border:0;color:var(--muted);font:600 14px var(--f-body);cursor:pointer;padding:6px}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .js .rv:not(.in){translate:none;scale:none}
+}
+</style>
+<link rel="preload" as="image" href="img/corolla.webp" type="image/webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%23f7c600%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-size=%2218%22 font-family=%22Arial%22 font-weight=%22900%22 text-anchor=%22middle%22 fill=%22%23111%22%3ER%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+
+<canvas id="scene" aria-hidden="true"></canvas>
+
+<div class="page">
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="plate" aria-label="Rayman Hire home"><span class="gb" aria-hidden="true"><span>★</span><span>UK</span></span><span class="txt">RAYMAN HIRE</span></a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#fleet">Fleet</a></li>
+      <li><a href="#weekly">Weekly payment</a></li>
+      <li><a href="#features">Why Rayman</a></li>
+      <li><a href="#areas">Areas</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <a class="btn btn-plate call" href="tel:+447723339946" aria-label="Call Rayman Hire on 07723 339946"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span class="lbl">07723 339946</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1 id="h1"><span class="kw">Taxi &amp; private hire car rental in Rochdale &amp; Greater Manchester</span><span class="big">Drive <em>today.</em><br>Pay weekly.</span></h1>
+        <p class="lead">Clean, fuel-saving Toyota hybrids for taxi and private hire drivers. No age limit, fresh licence holders welcome, and one simple weekly payment.</p>
+        <div class="ctas">
+          <a class="btn btn-plate call" href="tel:+447723339946"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call +44 7723 339946</a>
+          <a class="btn btn-ghost" href="https://wa.me/447723339946?text=Hi%20Rayman%20Hire%2C%20I%27d%20like%20to%20hire%20a%20car." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>WhatsApp us</a>
+        </div>
+        <ul class="chips" aria-label="Key benefits">
+          <li class="chip">No age limit</li>
+          <li class="chip">Fresh licence accepted</li>
+          <li class="chip">Weekly payments</li>
+        </ul>
+      </div>
+      <div class="hero-spacer" aria-hidden="true"></div>
+      <img class="hero-fallback" src="img/corolla.webp" alt="White Toyota Corolla hybrid available for weekly hire in Rochdale" width="1400" height="816" fetchpriority="high">
+      <div class="car-switch" role="group" aria-label="Choose a car to view">
+        <span class="tag">ON STAGE</span>
+        <button type="button" id="sw-corolla" data-car="0" aria-pressed="true">Corolla 2022</button>
+        <button type="button" id="sw-prius" data-car="1" aria-pressed="false">Prius 2019</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="track">
+    <span>No age limit</span><span>Fresh licence accepted</span><span>Weekly payments</span><span>Toyota hybrids</span><span>Rochdale OL11</span><span>Private hire ready</span>
+    <span>No age limit</span><span>Fresh licence accepted</span><span>Weekly payments</span><span>Toyota hybrids</span><span>Rochdale OL11</span><span>Private hire ready</span>
+  </div></div>
+
+  <section class="block" id="fleet" aria-labelledby="fleet-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Our fleet</span>
+        <h2 id="fleet-h">Taxi cars for hire</h2>
+        <p>Hybrid Toyotas that keep fuel costs down on long shifts. Move your mouse over a car to look around it.</p>
+      </div>
+      <div class="fleet">
+        <article class="car-card glass tilt rv">
+          <div class="top">
+            <div><h3>Toyota Corolla</h3><div class="yr">2022 · HATCHBACK · WHITE</div></div>
+            <span class="plate reg" aria-hidden="true"><span class="gb"><span>★</span><span>UK</span></span><span class="txt">RH22 CRL</span></span>
+          </div>
+          <div class="stage"><img src="img/corolla.webp" alt="White 2022 Toyota Corolla hybrid hatchback for taxi hire in Rochdale" width="1400" height="816" loading="lazy" decoding="async"></div>
+          <dl class="specs">
+            <div class="spec"><dt>Year</dt><dd>2022</dd></div>
+            <div class="spec"><dt>Seats</dt><dd>5</dd></div>
+            <div class="spec"><dt>Gearbox</dt><dd>Auto</dd></div>
+            <div class="spec"><dt>Fuel</dt><dd>Hybrid</dd></div>
+          </dl>
+          <div class="foot">
+            <div class="price">Weekly hire<small>Call for this week's price</small></div>
+            <a class="btn btn-plate" href="https://wa.me/447723339946?text=Hi%20Rayman%20Hire%2C%20is%20the%202022%20Toyota%20Corolla%20available%3F" target="_blank" rel="noopener">Book this car</a>
+          </div>
+        </article>
+        <article class="car-card glass tilt rv">
+          <div class="top">
+            <div><h3>Toyota Prius</h3><div class="yr">2019 · SALOON · SILVER</div></div>
+            <span class="plate reg" aria-hidden="true"><span class="gb"><span>★</span><span>UK</span></span><span class="txt">RH19 PRS</span></span>
+          </div>
+          <div class="stage"><img src="img/prius.webp" alt="Silver 2019 Toyota Prius hybrid for private hire rental in Greater Manchester" width="1400" height="716" loading="lazy" decoding="async"></div>
+          <dl class="specs">
+            <div class="spec"><dt>Year</dt><dd>2019</dd></div>
+            <div class="spec"><dt>Seats</dt><dd>5</dd></div>
+            <div class="spec"><dt>Gearbox</dt><dd>Auto</dd></div>
+            <div class="spec"><dt>Fuel</dt><dd>Hybrid</dd></div>
+          </dl>
+          <div class="foot">
+            <div class="price">Weekly hire<small>Call for this week's price</small></div>
+            <a class="btn btn-plate" href="https://wa.me/447723339946?text=Hi%20Rayman%20Hire%2C%20is%20the%202019%20Toyota%20Prius%20available%3F" target="_blank" rel="noopener">Book this car</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="weekly" aria-labelledby="weekly-h">
+    <div class="wrap weekly">
+      <div class="week3d rv" aria-hidden="true">
+        <div class="week-board">
+          <div class="day pay"><small>MON</small><b>PAY</b></div>
+          <div class="day drive"><small>TUE</small><b>▶</b></div>
+          <div class="day drive"><small>WED</small><b>▶</b></div>
+          <div class="day drive"><small>THU</small><b>▶</b></div>
+          <div class="day drive"><small>FRI</small><b>▶</b></div>
+          <div class="day drive"><small>SAT</small><b>▶</b></div>
+          <div class="day drive"><small>SUN</small><b>▶</b></div>
+        </div>
+        <div class="week-legend"><span><i style="background:var(--plate)"></i>One payment</span><span><i style="background:#16213f;border:1px solid var(--line)"></i>Seven days on the road</span></div>
+      </div>
+      <div>
+        <div class="sec-head rv" style="margin-bottom:0">
+          <span class="eyebrow">Weekly payment</span>
+          <h2 id="weekly-h">Weekly car hire. One payment, seven days.</h2>
+          <p>Pay once a week and keep your earnings moving. No long contracts and no big monthly bill.</p>
+        </div>
+        <div class="terms">
+          <div class="term glass rv"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><div><h3>Simple weekly payments</h3><p>A fixed amount each week, agreed up front. You always know what you pay.</p></div></div>
+          <div class="term glass hl rv"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.5"/><path d="M13 10h5M13 14h3"/></svg></span><div><h3>Fresh licence also acceptable</h3><p>Just passed or newly licensed? You can still hire with us. Call and we'll talk you through it.</p></div></div>
+          <div class="term glass rv"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><div><h3>No age limit</h3><p>Young driver or experienced, age won't stop you getting a car from Rayman Hire.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="features" aria-labelledby="features-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Key features</span>
+        <h2 id="features-h">Why drivers choose Rayman</h2>
+        <p>Hover or tap a card to flip it.</p>
+      </div>
+      <div class="features">
+        <div class="flip big rv"><div class="flip-in">
+          <div class="face front"><span class="hint">Feature 01</span><div><div class="num">0</div><h3>Age limit</h3></div></div>
+          <div class="face back"><h3>No age limit</h3><p>Many hire firms only take drivers over 25. We don't set an age limit, so more drivers can get on the road.</p><span class="hint">Rayman Hire</span></div>
+        </div><button class="flip-btn" type="button" aria-label="Flip card: No age limit"></button></div>
+        <div class="flip rv"><div class="flip-in">
+          <div class="face front"><span class="hint">Feature 02</span><div><div class="num">NEW</div><h3>Licence? Welcome</h3></div></div>
+          <div class="face back"><h3>Fresh licence accepted</h3><p>You don't need years of driving history to hire from us. Fresh licence holders are welcome.</p><span class="hint">Rayman Hire</span></div>
+        </div><button class="flip-btn" type="button" aria-label="Flip card: Fresh licence accepted"></button></div>
+        <div class="flip rv"><div class="flip-in">
+          <div class="face front"><span class="hint">Feature 03</span><div><div class="num">×1</div><h3>Payment a week</h3></div></div>
+          <div class="face back"><h3>Weekly payments</h3><p>Pay week by week, in line with how you earn. No long contract to lock you in.</p><span class="hint">Rayman Hire</span></div>
+        </div><button class="flip-btn" type="button" aria-label="Flip card: Weekly payments"></button></div>
+        <div class="flip rv"><div class="flip-in">
+          <div class="face front"><span class="hint">Feature 04</span><div><div class="num">HYB</div><h3>Hybrid fleet</h3></div></div>
+          <div class="face back"><h3>Low fuel costs</h3><p>Toyota hybrids use less fuel in stop-start town traffic, so more of each fare stays with you.</p><span class="hint">Rayman Hire</span></div>
+        </div><button class="flip-btn" type="button" aria-label="Flip card: Hybrid fleet"></button></div>
+        <div class="flip rv"><div class="flip-in">
+          <div class="face front"><span class="hint">Feature 05</span><div><div class="num">OL11</div><h3>Local to Rochdale</h3></div></div>
+          <div class="face back"><h3>Local and easy to reach</h3><p>Based at 2 Southdown Close, OL11 4PP. Real people you can call, not a call centre.</p><span class="hint">Rayman Hire</span></div>
+        </div><button class="flip-btn" type="button" aria-label="Flip card: Local to Rochdale"></button></div>
+        <div class="flip rv"><div class="flip-in">
+          <div class="face front"><span class="hint">Feature 06</span><div><div class="num">FAST</div><h3>Quick start</h3></div></div>
+          <div class="face back"><h3>On the road quickly</h3><p>Call, bring your documents, pick your car. We keep the paperwork short so you can start earning.</p><span class="hint">Rayman Hire</span></div>
+        </div><button class="flip-btn" type="button" aria-label="Flip card: Quick start"></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="compare" aria-labelledby="compare-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Compare</span>
+        <h2 id="compare-h">Rayman vs the usual hire firm</h2>
+      </div>
+      <div class="compare glass rv">
+        <table>
+          <thead><tr><th scope="col"><span class="eyebrow" style="color:var(--muted)">What matters</span></th><th scope="col" class="us">Rayman Hire</th><th scope="col">Typical hire firm</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Age limit</th><td class="us"><span class="yes">No age limit</span></td><td class="them">Often 25+ only</td></tr>
+            <tr><th scope="row">Fresh licence</th><td class="us"><span class="yes">Accepted</span></td><td class="them">Usually 2–3 years held</td></tr>
+            <tr><th scope="row">Payments</th><td class="us"><span class="yes">Weekly</span></td><td class="them">Weekly or monthly contract</td></tr>
+            <tr><th scope="row">Cars</th><td class="us"><span class="yes">Toyota hybrids</span></td><td class="them">Mixed fleet</td></tr>
+            <tr><th scope="row">Contact</th><td class="us"><span class="yes">Call or WhatsApp direct</span></td><td class="them">Online form, wait for reply</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">How it works</span>
+        <h2 id="how-h">Four steps to the road</h2>
+      </div>
+      <div class="road"><ol class="steps">
+        <li class="step glass rv"><span class="n">1</span><h3>Call or WhatsApp</h3><p>Ring 07723 339946 and tell us which car you want.</p></li>
+        <li class="step glass rv"><span class="n">2</span><h3>Bring your documents</h3><p>Driving licence, proof of address and your private hire badge if you have one.</p></li>
+        <li class="step glass rv"><span class="n">3</span><h3>Choose your car</h3><p>See the car in person at OL11 4PP and agree your weekly payment.</p></li>
+        <li class="step glass rv"><span class="n">4</span><h3>Start driving</h3><p>Collect the keys and start earning. Pay each week after that.</p></li>
+      </ol></div>
+    </div>
+  </section>
+
+  <section class="block" id="areas" aria-labelledby="areas-h">
+    <div class="wrap areas">
+      <div>
+        <div class="sec-head rv" style="margin-bottom:24px">
+          <span class="eyebrow">Areas we cover</span>
+          <h2 id="areas-h">Taxi car hire across Greater Manchester</h2>
+        </div>
+        <div class="copy-txt rv">
+          <p>Rayman Hire is a <strong>private hire car rental</strong> company based in <strong>Rochdale (OL11)</strong>. We rent Toyota Corolla and Toyota Prius hybrids to taxi and private hire drivers on simple <strong>weekly payments</strong>.</p>
+          <p>Unlike many hire firms, we have <strong>no age limit</strong> and a <strong>fresh licence is also acceptable</strong>. That makes us a good fit for new drivers starting out and experienced drivers who want a cheaper, fuel-saving car.</p>
+          <p>Drivers come to us from Rochdale, Heywood, Middleton, Littleborough, Oldham, Bury and Manchester.</p>
+        </div>
+      </div>
+      <ul class="town-list glass rv" aria-label="Towns we serve">
+        <li class="home">Rochdale</li><li>Heywood</li><li>Middleton</li><li>Littleborough</li><li>Milnrow</li><li>Oldham</li><li>Bury</li><li>Manchester</li><li>Greater Manchester</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Questions</span>
+        <h2 id="faq-h">Common questions</h2>
+      </div>
+      <div class="faq">
+        <details class="glass"><summary>Is there an age limit?</summary><p>No. Rayman Hire has no age limit for drivers.</p></details>
+        <details class="glass"><summary>I have a fresh licence. Can I still hire?</summary><p>Yes, fresh licences are also acceptable. Call us and we'll explain what you need to bring.</p></details>
+        <details class="glass"><summary>How do the payments work?</summary><p>You pay weekly. Call +44 7723 339946 for this week's price on each car.</p></details>
+        <details class="glass"><summary>Where are you based?</summary><p>2 Southdown Close, Rochdale OL11 4PP. We serve drivers across Rochdale and Greater Manchester.</p></details>
+        <details class="glass"><summary>Can I see the car before I hire it?</summary><p>Yes. Call ahead and come to see the car in person before you agree anything.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Contact</span>
+        <h2 id="contact-h">Get your car this week</h2>
+      </div>
+      <div class="contact">
+        <div class="c-card glass">
+          <div class="c-row"><span class="eyebrow">Phone / WhatsApp</span><a class="big-num call" id="phone" href="tel:+447723339946">+44 7723 339946</a>
+            <button class="copy" id="copy-phone" type="button">Copy number</button></div>
+          <div class="c-row"><span class="eyebrow">Address</span><address class="addr">Rayman Hire<br>2 Southdown Close<br>Rochdale OL11 4PP</address>
+            <a class="copy" href="https://www.google.com/maps/search/?api=1&amp;query=2+Southdown+Close+Rochdale+OL11+4PP" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>
+          <div class="ctas">
+            <a class="btn btn-plate call" href="tel:+447723339946">Call now</a>
+            <a class="btn btn-ghost" href="https://wa.me/447723339946" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="c-card glass">
+          <form class="enq" id="enq" novalidate>
+            <div class="f2">
+              <label for="f-name">Your name<input id="f-name" name="name" autocomplete="name" required placeholder="e.g. Ahmed Khan"></label>
+              <label for="f-tel">Phone<input id="f-tel" name="tel" type="tel" autocomplete="tel" required placeholder="07…"></label>
+            </div>
+            <div class="f2">
+              <label for="f-car">Car<select id="f-car" name="car"><option>Toyota Corolla 2022</option><option>Toyota Prius 2019</option><option>Not sure yet</option></select></label>
+              <label for="f-lic">Licence<select id="f-lic" name="lic"><option>Fresh licence</option><option>Under 3 years</option><option>3+ years</option></select></label>
+            </div>
+            <label for="f-msg">Message<textarea id="f-msg" name="msg" placeholder="When do you want to start?"></textarea></label>
+            <button class="btn btn-plate" type="submit">Send enquiry on WhatsApp</button>
+            <p class="form-note" id="form-note">Your enquiry opens as a WhatsApp message to Rayman Hire.</p>
+            <div class="form-out" id="form-out" hidden>
+              <strong>Your message is ready.</strong>
+              <a class="btn btn-plate" id="wa-send" href="https://wa.me/447723339946" target="_blank" rel="noopener">Open WhatsApp to send</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="plate"><span class="gb" aria-hidden="true"><span>★</span><span>UK</span></span><span class="txt">RAYMAN HIRE</span></span>
+    <p>Taxi &amp; private hire car rental · 2 Southdown Close, Rochdale OL11 4PP · +44 7723 339946</p>
+    <p>© <span id="yr">2026</span> Rayman Hire · raymanhire.co.uk</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-plate call" href="tel:+447723339946">Call</a>
+  <a class="btn btn-ghost" href="https://wa.me/447723339946" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-h">
+  <div class="sheet-card glass">
+    <button class="sheet-close" id="sheet-close" type="button">Close ✕</button>
+    <span class="eyebrow" id="sheet-h">Call Rayman Hire</span>
+    <a class="big-num" href="tel:+447723339946" id="sheet-num">+44 7723 339946</a>
+    <p class="form-note">Dial this number from your phone, or message us on WhatsApp.</p>
+    <div class="row">
+      <a class="btn btn-plate" href="tel:+447723339946">Call now</a>
+      <a class="btn btn-ghost" href="https://wa.me/447723339946" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="btn btn-ghost" type="button" id="sheet-copy">Copy number</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  document.documentElement.classList.add('js');
+  document.documentElement.lang = 'en-GB';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = s => document.querySelector(s);
+  $('#yr').textContent = new Date().getFullYear();
+  const NUM = '+44 7723 339946';
+
+  /* ---------- Call buttons ----------
+     On a phone the tel: link dials straight away. On a computer, or inside an
+     embedded preview where tel: links are blocked, a call sheet shows the number. */
+  let framed = true; try { framed = window.self !== window.top; } catch(e){}
+  const touchPhone = matchMedia('(pointer: coarse)').matches;
+  const sheet = $('#sheet');
+  function openSheet(){ sheet.hidden = false; $('#sheet-close').focus(); }
+  function closeSheet(){ sheet.hidden = true; }
+  document.querySelectorAll('a.call').forEach(a => a.addEventListener('click', e => {
+    if (framed || !touchPhone){ e.preventDefault(); openSheet(); }
+  }));
+  $('#sheet-close').addEventListener('click', closeSheet);
+  sheet.addEventListener('click', e => { if (e.target === sheet) closeSheet(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !sheet.hidden) closeSheet(); });
+  function copyNum(btn, selectEl){
+    const done = () => { const t = btn.textContent; btn.textContent = 'Copied'; setTimeout(() => btn.textContent = t, 1600); };
+    const sel = () => { const r = document.createRange(); r.selectNodeContents(selectEl); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected, press Ctrl+C'; };
+    try { navigator.clipboard.writeText(NUM).then(done, sel); } catch(e){ sel(); }
+  }
+  $('#copy-phone').addEventListener('click', e => copyNum(e.currentTarget, $('#phone')));
+  $('#sheet-copy').addEventListener('click', e => copyNum(e.currentTarget, $('#sheet-num')));
+
+  /* ---------- Enquiry form -> WhatsApp ---------- */
+  $('#enq').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target, name = f.name.value.trim(), tel = f.tel.value.trim(), note = $('#form-note');
+    if (!name || !tel){ note.textContent = 'Please add your name and phone number so we can call you back.'; note.style.color = 'var(--plate)'; return; }
+    const msg = `Hi Rayman Hire, my name is ${name} (${tel}). I'm interested in the ${f.car.value}. Licence: ${f.lic.value}.` + (f.msg.value.trim() ? ` ${f.msg.value.trim()}` : '');
+    $('#wa-send').href = 'https://wa.me/447723339946?text=' + encodeURIComponent(msg);
+    note.textContent = 'Tap the button below to send it.'; note.style.color = '';
+    $('#form-out').hidden = false;
+  });
+
+  /* ---------- CSS 3D: reveals, tilt, flips ---------- */
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }), {rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv').forEach(el => io.observe(el));
+  } else document.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
+
+  if (!reduce && matchMedia('(hover: hover)').matches){
+    document.querySelectorAll('.tilt').forEach(card => {
+      let raf = 0;
+      card.addEventListener('pointermove', e => {
+        if (raf) return;
+        raf = requestAnimationFrame(() => {
+          raf = 0;
+          const r = card.getBoundingClientRect(), x = (e.clientX - r.left)/r.width - .5, y = (e.clientY - r.top)/r.height - .5;
+          card.style.transform = `rotateY(${x*12}deg) rotateX(${-y*10}deg)`;
+        });
+      });
+      card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+    });
+  }
+  document.querySelectorAll('.flip-btn').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('on')));
+
+  /* ---------- 3D scene (loaded after the page so text appears first) ---------- */
+  function hasWebGL(){ try { const c = document.createElement('canvas'); return !!(c.getContext('webgl') || c.getContext('experimental-webgl')); } catch(e){ return false; } }
+  function noGL(){ document.documentElement.classList.add('no-webgl'); }
+  if (!hasWebGL()){ noGL(); return; }
+  const s = document.createElement('script');
+  s.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+  s.async = true;
+  s.onload = () => { try { initScene(); } catch(err){ console.warn('3D scene off:', err); noGL(); } };
+  s.onerror = noGL;
+  document.head.appendChild(s);
+
+  function initScene(){
+    const THREE = window.THREE;
+    const canvas = $('#scene');
+    const mobile = innerWidth < 900 || touchPhone;
+    const renderer = new THREE.WebGLRenderer({canvas, antialias:!mobile, powerPreference:'high-performance'});
+    renderer.setPixelRatio(Math.min(devicePixelRatio, mobile ? 1.5 : 1.75));
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    canvas.addEventListener('webglcontextlost', e => { e.preventDefault(); noGL(); canvas.remove(); });
+
+    const scene = new THREE.Scene();
+    const NIGHT = 0x060a15;
+    scene.background = new THREE.Color(NIGHT);
+    scene.fog = new THREE.Fog(NIGHT, 14, 55);
+    const camera = new THREE.PerspectiveCamera(36, 1, .1, 200);
+
+    scene.add(new THREE.AmbientLight(0x8090c0, .35));
+    const key = new THREE.SpotLight(0xfff1c8, 2.2, 40, .55, .6, 1.2); key.position.set(0, 12, 4); scene.add(key);
+    const rim = new THREE.PointLight(0xf7c600, .8, 14); rim.position.set(-6, 7, -16); scene.add(rim);
+    const rim2 = new THREE.PointLight(0x4d7cff, .7, 14); rim2.position.set(7, 3, -6); scene.add(rim2);
+
+    const floor = new THREE.Mesh(new THREE.PlaneGeometry(220, 220), new THREE.MeshStandardMaterial({color:0x0a1022, roughness:.42, metalness:.55}));
+    floor.rotation.x = -Math.PI/2; scene.add(floor);
+    const grid = new THREE.GridHelper(120, 60, 0x1b2850, 0x111a33);
+    grid.position.y = .002; grid.material.transparent = true; grid.material.opacity = .55; scene.add(grid);
+
+    // stage
+    const stage = new THREE.Group(); scene.add(stage);
+    const disc = new THREE.Mesh(new THREE.CylinderGeometry(4.1, 4.3, .22, 72), new THREE.MeshStandardMaterial({color:0x101830, roughness:.18, metalness:.85}));
+    disc.position.y = .11; stage.add(disc);
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(4.2, .035, 10, 140), new THREE.MeshBasicMaterial({color:0xf7c600}));
+    ring.rotation.x = Math.PI/2; ring.position.y = .22; stage.add(ring);
+    const orbit = new THREE.Group(); stage.add(orbit);
+    const o1 = new THREE.Mesh(new THREE.TorusGeometry(4.9, .012, 6, 160), new THREE.MeshBasicMaterial({color:0xf7c600, transparent:true, opacity:.55}));
+    o1.rotation.x = Math.PI/2.15; o1.position.y = .6; orbit.add(o1);
+    const o2 = new THREE.Mesh(new THREE.TorusGeometry(5.5, .01, 6, 160), new THREE.MeshBasicMaterial({color:0x6f8dff, transparent:true, opacity:.35}));
+    o2.rotation.x = Math.PI/1.85; o2.position.y = .9; orbit.add(o2);
+    const dotsOnRing = [];
+    const dotGeo = new THREE.SphereGeometry(.07, 10, 10), dotMat = new THREE.MeshBasicMaterial({color:0xf7c600});
+    for (let i=0;i<3;i++){ const d = new THREE.Mesh(dotGeo, dotMat); d.userData.a = i*Math.PI*2/3; orbit.add(d); dotsOnRing.push(d); }
+    const cone = new THREE.Mesh(new THREE.ConeGeometry(4.3, 11, 48, 1, true),
+      new THREE.MeshBasicMaterial({color:0xfff0b8, transparent:true, opacity:.05, side:THREE.DoubleSide, depthWrite:false, blending:THREE.AdditiveBlending}));
+    cone.position.y = 5.5; stage.add(cone);
+
+    function gradTex(stops, radial){
+      const c = document.createElement('canvas'); c.width = radial ? 128 : 4; c.height = radial ? 128 : 128;
+      const g = c.getContext('2d');
+      const gr = radial ? g.createRadialGradient(64,64,0,64,64,64) : g.createLinearGradient(0,0,0,128);
+      stops.forEach(s => gr.addColorStop(s[0], s[1])); g.fillStyle = gr; g.fillRect(0,0,c.width,c.height);
+      return new THREE.CanvasTexture(c);
+    }
+    const shadow = new THREE.Mesh(new THREE.PlaneGeometry(7.2, 2.6),
+      new THREE.MeshBasicMaterial({map:gradTex([[0,'rgba(0,0,0,.85)'],[.6,'rgba(0,0,0,.35)'],[1,'rgba(0,0,0,0)']], true), transparent:true, depthWrite:false}));
+    shadow.rotation.x = -Math.PI/2; shadow.position.y = .225; stage.add(shadow);
+
+    // car + reflection (hidden until the photo has loaded, so no blank plane shows)
+    const carHolder = new THREE.Group(); carHolder.visible = false; stage.add(carHolder);
+    const carMat = new THREE.MeshBasicMaterial({transparent:true, alphaTest:.03});
+    const reflMat = new THREE.MeshBasicMaterial({transparent:true, opacity:.28, depthWrite:false, alphaMap:gradTex([[0,'#fff'],[.55,'#333'],[1,'#000']])});
+    const plane = new THREE.PlaneGeometry(1,1);
+    const carMesh = new THREE.Mesh(plane, carMat), reflMesh = new THREE.Mesh(plane, reflMat);
+    carHolder.add(carMesh, reflMesh);
+
+    const cars = [{src:'img/corolla.webp'},{src:'img/prius.webp'}];
+    let current = 0;
+    function fit(i){
+      const c = cars[i], img = c.tex.image, W = 7.4, H = W*img.height/img.width;
+      carMat.map = c.tex; carMat.needsUpdate = true;
+      reflMat.map = c.refl; reflMat.needsUpdate = true;
+      carMesh.scale.set(W, H, 1); carMesh.position.y = .22 + H/2 - .04;
+      reflMesh.scale.set(W, H, 1); reflMesh.position.y = .22 - H/2 + .04;
+    }
+    const loader = new THREE.TextureLoader();
+    cars.forEach((c, i) => loader.load(c.src, t => {
+      t.encoding = THREE.sRGBEncoding; t.anisotropy = renderer.capabilities.getMaxAnisotropy ? Math.min(8, renderer.capabilities.getMaxAnisotropy()) : 1;
+      c.tex = t;
+      const r = t.clone(); r.needsUpdate = true; r.wrapT = THREE.RepeatWrapping; r.repeat.y = -1; r.offset.y = 1; c.refl = r;
+      if (i === 0){ fit(0); carHolder.visible = true; }
+    }, undefined, () => { if (i === 0) noGL(); }));
+
+    // motorway light trails: one instanced mesh = one draw call
+    const TRAILS = mobile ? 50 : 90;
+    const trails = new THREE.InstancedMesh(new THREE.BoxGeometry(1, .045, .045),
+      new THREE.MeshBasicMaterial({color:0xffffff, transparent:true, opacity:.85, blending:THREE.AdditiveBlending, depthWrite:false}), TRAILS);
+    const tColors = [0xf7c600, 0xffe08a, 0xff4d4d, 0xff7a5c, 0xffffff, 0x7fa2ff].map(c => new THREE.Color(c));
+    const tData = [], dummy = new THREE.Object3D();
+    for (let i=0;i<TRAILS;i++){
+      const lane = i%2 ? 1 : -1;
+      tData.push({x:(Math.random()-.5)*120, y:.25+Math.random()*1.4, z:-14-Math.random()*28, v:(6+Math.random()*10)*lane, len:2+Math.random()*7});
+      trails.setColorAt(i, tColors[i%tColors.length]);
+    }
+    trails.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    scene.add(trails);
+    function updTrails(dt){
+      for (let i=0;i<TRAILS;i++){
+        const d = tData[i]; d.x += d.v*dt; if (d.x > 60) d.x = -60; else if (d.x < -60) d.x = 60;
+        dummy.position.set(d.x, d.y, d.z); dummy.scale.set(d.len, 1, 1); dummy.updateMatrix(); trails.setMatrixAt(i, dummy.matrix);
+      }
+      trails.instanceMatrix.needsUpdate = true;
+    }
+    updTrails(0);
+
+    // haze particles (moved as a group, no per-frame CPU loop)
+    const N = mobile ? 300 : 600, pos = new Float32Array(N*3);
+    for (let i=0;i<N;i++){ pos[i*3]=(Math.random()-.5)*60; pos[i*3+1]=Math.random()*18; pos[i*3+2]=(Math.random()-.7)*50; }
+    const pg = new THREE.BufferGeometry(); pg.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    const dust = new THREE.Points(pg, new THREE.PointsMaterial({color:0xbfd0ff, size:.06, transparent:true, opacity:.55, depthWrite:false}));
+    scene.add(dust);
+
+    // distant city: instanced towers + windows
+    const TW = 40;
+    const towers = new THREE.InstancedMesh(new THREE.BoxGeometry(1,1,1), new THREE.MeshBasicMaterial({color:0x0c1430}), TW);
+    const winList = [];
+    for (let i=0;i<TW;i++){
+      const h = 3+Math.random()*12, w = 1.5+Math.random()*2.5, x = (i-20)*3.4 + Math.random(), z = -48 - Math.random()*8;
+      dummy.position.set(x, h/2, z); dummy.scale.set(w, h, w); dummy.updateMatrix(); towers.setMatrixAt(i, dummy.matrix);
+      for (let k=0;k<4;k++) if (Math.random() < .5) winList.push([x + (Math.random()-.5)*w*.7, Math.random()*h, z + w/2 + .01]);
+    }
+    scene.add(towers);
+    const wins = new THREE.InstancedMesh(new THREE.PlaneGeometry(.18,.12), new THREE.MeshBasicMaterial({color:0xf7c600, transparent:true, opacity:.5}), winList.length);
+    winList.forEach((p, i) => { dummy.position.set(p[0], p[1], p[2]); dummy.scale.set(1,1,1); dummy.updateMatrix(); wins.setMatrixAt(i, dummy.matrix); });
+    scene.add(wins);
+
+    // sizing: ignore small height changes from mobile address bars
+    let narrow = false, baseX = 0, lastW = 0, lastH = 0;
+    function resize(force){
+      const w = innerWidth, h = innerHeight;
+      if (!force && w === lastW && Math.abs(h - lastH) < 160) return;
+      lastW = w; lastH = h;
+      renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix();
+      narrow = w < 900;
+      baseX = narrow ? 0 : 4.6;
+      stage.scale.setScalar(narrow ? .5 : 1);
+    }
+    addEventListener('resize', () => resize(false)); resize(true);
+
+    let px=0, py=0, tx=0, ty=0;
+    if (!touchPhone) addEventListener('pointermove', e => { tx = e.clientX/innerWidth - .5; ty = e.clientY/innerHeight - .5; }, {passive:true});
+
+    // car switch with a 3D flip (driven by the render loop)
+    const btns = [...document.querySelectorAll('.car-switch button')];
+    let auto = true, flip = null;
+    function show(i){
+      if (i === current || flip || !cars[i].tex) return;
+      btns.forEach((b,k) => b.setAttribute('aria-pressed', String(k === i)));
+      if (reduce){ fit(i); current = i; return; }
+      flip = {t0:performance.now(), to:i, swapped:false};
+    }
+    btns.forEach(b => b.addEventListener('click', () => { auto = false; show(+b.dataset.car); }));
+    if (!reduce) setInterval(() => { if (auto && !document.hidden && cars[1].tex) show((current+1)%2); }, 6000);
+    const easeIn = k => k*k*k, easeOut = k => 1 - Math.pow(1-k, 3);
+
+    let sp = scrollY;
+    addEventListener('scroll', () => { sp = scrollY; }, {passive:true});
+
+    const look = new THREE.Vector3();
+    const clock = new THREE.Clock();
+    let skip = false, shown = false;
+    function frame(now){
+      requestAnimationFrame(frame);
+      const dt = Math.min(clock.getDelta(), .05), t = clock.elapsedTime;
+      const hero = Math.min(sp / Math.max(innerHeight*.9, 1), 1.6);
+      // past the hero only the ambient scene remains: draw it at half rate
+      if (hero > 1.25){ skip = !skip; if (skip) return; }
+      px += (tx-px)*.05; py += (ty-py)*.05;
+      stage.position.set(baseX, 0, -Math.min(hero, 1.2)*34);
+      stage.visible = hero < 1.25;
+      const baseY = narrow ? 3.2 : 2.6;
+      camera.position.set(px*1.4, baseY + hero*4 - py*.5, (narrow ? 19 : 15.5) + hero*4);
+      look.set(baseX*.42 + px*.4, (narrow ? -2.2 : 1.7) + hero*1.5, -hero*12);
+      camera.lookAt(look);
+
+      if (flip){
+        const e = (now - flip.t0)/1000;
+        if (e < .45) carHolder.rotation.y = easeIn(e/.45)*Math.PI/2;
+        else {
+          if (!flip.swapped){ fit(flip.to); current = flip.to; flip.swapped = true; }
+          const k = Math.min((e-.45)/.6, 1);
+          carHolder.rotation.y = -Math.PI/2*(1 - easeOut(k));
+          ring.scale.setScalar(1 + .15*(1-k)*Math.abs(Math.sin(k*9)));
+          if (k >= 1){ flip = null; ring.scale.setScalar(1); }
+        }
+      } else if (!reduce) carHolder.rotation.y = Math.sin(t*.5)*.05 + px*.12;
+
+      if (!reduce){
+        orbit.rotation.y = t*.25;
+        dotsOnRing.forEach(d => { const a = d.userData.a + t*.8; d.position.set(Math.cos(a)*4.9, .6 + Math.sin(a)*.35, Math.sin(a)*1.5); });
+        cone.material.opacity = .045 + Math.sin(t*1.3)*.012;
+        updTrails(skip === false && hero > 1.25 ? dt*2 : dt);
+        dust.position.y = (t*.12) % 2; dust.rotation.y = t*.01;
+        rim.position.x = -6 + Math.sin(t*.6)*2;
+      }
+      renderer.render(scene, camera);
+      if (!shown){ shown = true; canvas.classList.add('ready'); }
+    }
+    requestAnimationFrame(frame);
+  }
+})();
+</script>
+
+</body>
+</html>

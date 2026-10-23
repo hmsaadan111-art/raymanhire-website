@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raymanhire.co.uk/sitemap.xml
